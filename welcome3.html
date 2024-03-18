@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to SAFAR</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden; /* Hide horizontal scroll bar */
+            background-color: #e0e0e0; /* Background color */
+        }
+        .background {
+            position: absolute;
+            inset-block-start: 0;
+            inset-inline-start: 0;
+            inline-size: 100%;
+            block-size: 100%;
+            background-image: url('Highwaybackground.jpg'); /* Replace 'background.jpg' with your image path */
+            background-size: cover;
+            background-position: center;
+            z-index: -1; /* Place the background behind other elements */
+        }
+        .logo {
+            position: absolute;
+            inset-inline-start: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            inset-block-start: 50px; /* Adjust top margin as needed */
+        }
+        .logo img {
+            inline-size: 150px; /* Adjust logo size */
+            block-size: auto;
+        }
+        .message {
+            position: absolute;
+            inset-block-end: 20px;
+            inset-inline-start: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: #030929; /* Blue message color */
+            font-size: 24px; /* Message font size */
+            font-weight: bold; /* Make the message bold */
+            text-shadow: 2px 2px 4px rgba(33, 150, 243, 0.5); /* Add text shadow */
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="logo">
+        <img src="SAFAR_logo.jpg" alt="SAFAR Logo"> <!-- Replace 'safar_logo.png' with your logo image path -->
+    </div>
+    <div class="message">
+        Your Trusted Travel Companion
+    </div>
+    <script>
+        // JavaScript code for moving bus animation
+        const bus = document.createElement('img');
+        bus.src = 'citybus.png'; // Replace 'bus.' with your bus icon image path
+        bus.style.position = 'absolute';
+        bus.style.top = '50%';
+        bus.style.left = '-100px'; // Initial position off-screen
+        bus.style.transform = 'translateY(-50%)';
+        bus.style.transition = 'left 05s linear'; // Adjust the animation duration as needed
+        document.body.appendChild(bus);
+
+        // Move the bus across the screen
+        setTimeout(() => {
+            bus.style.left = 'calc(100% + 100px)'; // Move the bus across the screen
+            // Redirect after the bus passes 2-3 times
+            setTimeout(() => {
+                window.location.href = 'login.html'; // Redirect to login page
+            }, 5000); // Adjust the timeout duration (10s animation * 3 passes)
+        }, 100);
+    </script>
+</body>
+</html>

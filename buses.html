@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Buses</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+            color: #333;
+        }
+
+        .container {
+            max-inline-size: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .map-container {
+            block-size: 50vh; /* Half of the viewport height */
+            inline-size: 100%;
+            margin-block-end: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            position: fixed;
+            inset-block-start: 0;
+            inset-inline-start: 0;
+            z-index: 1; /* Ensure map is above other content */
+            block-size: 50%; /* Updated to cover 50% of the page */
+        }
+
+        .list-container {
+            margin-block-start: 50%; /* Adjust margin to keep space for the fixed map */
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-block-end: 20px;
+        }
+
+        table {
+            inline-size: 100%;
+            border-collapse: collapse;
+            margin-block-start: 20px;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: start;
+            border-block-end: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f1f1f1;
+            font-weight: bold;
+        }
+
+        tr:hover {
+            background-color: #f9f9f9;
+        }
+
+        @media (max-inline-size: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .map-container {
+                block-size: 40vh;
+            }
+
+            .list-container {
+                margin-block-start: 60vh;
+                padding: 10px;
+            }
+        }
+    </style>
+    
+    <script>
+        // Function to start a countdown from a specified number of minutes
+        function startCountdown(minutes, elementId) {
+            let timeRemaining = minutes * 60; // Convert minutes to seconds
+            const element = document.getElementById(elementId);
+
+            const countdownInterval = setInterval(() => {
+                const minutesLeft = Math.floor(timeRemaining / 60);
+                const secondsLeft = timeRemaining % 60;
+
+                // Update the element's text with the remaining time
+                element.textContent = `${minutesLeft} min ${secondsLeft < 10 ? '0' : ''}${secondsLeft} sec`;
+
+                // Decrease the remaining time
+                timeRemaining--;
+
+                // If the countdown is finished, clear the interval
+                if (timeRemaining < 0) {
+                    clearInterval(countdownInterval);
+                    element.textContent = "Arriving"; // You can set your own message for bus arrival
+                }
+            }, 1000); // Update the countdown every second
+        }
+
+        // When the window loads, start the countdowns
+        window.onload = function() {
+            startCountdown(10, 'timeTo507'); // Start a 60-minute countdown for bus 507
+            startCountdown(20, 'timeTo313'); // Start a 60-minute countdown for bus 313
+            startCountdown(25, 'timeTo14'); // Start a 60-minute countdown for bus 313
+            startCountdown(30, 'timeTo61'); // Start a 60-minute countdown for bus 313
+        };
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="map-container">
+            <!-- Google Map Iframe -->
+            <iframe src="https://www.google.com/maps/d/embed?mid=1dU7196Xk-istZzF7x-LKwaRg_zZlZzk&ehbc=2E312F" 
+                    style="border: none;"
+                    height="100%"
+                    width="100%"
+                    allowfullscreen
+                    loading="lazy">
+            </iframe>
+        </div>
+        
+        <div class="list-container">
+            <h1>List of Buses</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Bus Number</th>
+                        <th>Destination</th>
+                        <th>Next Stop</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="trip_details.html">87</a></td>
+                        <td>Ghansoli Railway Station</td>
+                        <td>Panvel Railway Station</td>
+                        <td id="timeTo507">Calculating...</td>
+                    </tr>
+                    <tr>
+                        <td><a href="trip_details.html">99</a></td>
+                        <td>Thane Bus Depot</td>
+                        <td>Panvel Railway Station</td>
+                        <td id="timeTo313">Calculating...</td>
+                    </tr>
+                    <tr>
+                        <td><a href="trip_details.html">14</a></td>
+                        <td>Ghansoli Railway Station</td>
+                        <td>Vichumbe Depot</td>
+                        <td id="timeTo14">Calculating...</td>
+                    </tr>
+                    <tr>
+                        <td><a href="trip_details.html">61</a></td>
+                        <td>Thane Bus Depot</td>
+                        <td>Mansarovar Bus Depot</td>
+                        <td id="timeTo61">Calculating...</td>
+                    </tr>
+                    <!-- Add more rows for additional buses -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

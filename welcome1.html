@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAFAR - Your Travel Companion</title>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Animate CSS CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Inline CSS for demonstration -->
+    <style>
+        /* Custom CSS */
+        /* Hero section */
+        .hero-section {
+            background-color: #3498db;
+            padding: 5rem 0;
+        }
+
+        .hero-content {
+            max-inline-size: 600px;
+            margin: auto;
+        }
+
+        /* Features section */
+        .app-features {
+            background-color: #5dade2;
+            padding: 5rem 0;
+        }
+
+        /* Download section */
+        .download-section {
+            background-color: #85c1e9;
+            padding: 5rem 0;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #5dade2;
+            color: #333;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        /* Responsive design adjustments */
+        @media (max-inline-size: 768px) {
+            .hero-content {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Hero Section -->
+    <div class="hero-section flex items-center justify-center min-h-screen text-white bg-gradient-to-b from-blue-500 to-blue-700">
+        <div class="container px-4 mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Welcome to SAFAR</h1>
+            <p class="text-lg mb-8">Your Ultimate Bus Travel Companion</p>
+            <img src="WelcomeBackground.jpg" alt="App Screenshot" class="w-full md:w-auto rounded-md shadow-lg mb-8 mx-auto max-w-lg animate__animated animate__fadeIn"
+                style="max-inline-size: 100%;">
+            <a href="welcome2.html" class="bg-white hover:bg-gray-200 text-blue-600 font-bold py-3 px-6 md:py-4 md:px-8 rounded-full shadow-md transition duration-300">Try SAFAR</a>
+        </div>
+    </div>
+
+    <!-- App Features Section -->
+    <div class="app-features py-20 text-center">
+        <div class="container mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8">Key Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 bg-white rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold mb-4">Live Bus Tracking</h3>
+                    <p class="text-lg">Track the real-time location of your bus and plan your journey accordingly.</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold mb-4">Easy Booking</h3>
+                    <p class="text-lg">Effortlessly book your bus tickets through the SAFAR app and save time.</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold mb-4">Instant Notifications</h3>
+                    <p class="text-lg">Receive instant notifications regarding your bus arrival time, delays, and more.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Download Section -->
+    <div class="download-section py-20 text-center">
+        <div class="container mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8">Get Started Now</h2>
+            <a href="welcome2.html" class="bg-white hover:bg-gray-200 text-blue-600 font-bold py-3 px-6 md:py-4 md:px-8 rounded-full shadow-md transition duration-300">Get Started</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer py-8 bg-blue-600 text-white">
+        <div class="container mx-auto">
+            <p>&copy; 2024 SAFAR. All rights reserved.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

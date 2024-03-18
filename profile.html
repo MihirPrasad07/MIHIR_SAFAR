@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile - SAFAR</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #8bbac7;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar {
+      background-color: #0ba9b8;
+    }
+    .navbar-brand img {
+      height: 60px;
+    }
+    .profile-banner {
+      background: linear-gradient(to right, #1569bd, #11a178);
+      color: rgb(244, 237, 237);
+      padding: 75px 0;
+      text-align: center;
+    }
+    .profile-avatar {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 5px solid white;
+      margin-top: -55px;
+      box-shadow: 0 10px 6px rgba(0, 0, 0, 0.1);
+    }
+    .profile-content {
+  background-color: white;
+  border-radius: 10px;
+  margin: -85px 50px 20px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(177, 34, 34, 0.1);
+}
+
+/* Responsive media query for screens smaller than 768px */
+@media (max-width: 768px) {
+  .profile-content {
+    margin: -85px 20px 20px; /* Reduced side margins for smaller screens */
+    padding: 20px;
+  }
+}
+
+/* Additional media query for very small screens, like mobile phones */
+@media (max-width: 480px) {
+  .profile-content {
+    margin: -85px 10px 20px; /* Further reduce side margins for very small screens */
+    padding: 15px;
+  }
+}
+
+    .profile-info h2 {
+      margin: 10px 0;
+    }
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 30px;
+    }
+    .stat {
+      text-align: center;
+    }
+    .stat h3 {
+      font-size: 22px;
+      color: #4e54c8;
+    }
+    .profile-actions {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .action {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 0 30px;
+      border-radius: 20px;
+      background-color: #4e54c8;
+      color: white;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+    .action:hover {
+      background-color: #6f7bd9;
+    }
+    .footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="welcome1.html">
+        <img src="SAFAR_logo.jpg" alt="SAFAR Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="settings.html">Settings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="profile-banner">
+    <img src="Journey.jpg" class="profile-avatar" alt="Profile Picture">
+  </div>
+
+  <div class="container profile-content">
+    <div class="profile-info">
+      <h2>Mihir Prasad</h2>
+      <p>Travel Enthusiast & Blogger</p>
+    </div>
+    <div class="stats">
+      <div class="stat">
+        <h3>54</h3>
+        <p>Trips</p>
+      </div>
+      <div class="stat">
+        <h3>289</h3>
+        <p>Miles</p>
+      </div>
+      <div class="stat">
+        <h3>31</h3>
+        <p>Cities</p>
+      </div>
+    </div>
+    <div class="profile-actions">
+      <a href="ticketgallery.html" class="action">Show Ticket</a>
+      <a href="edit-profile.html" class="action">Edit Profile</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    &copy; 2024 SAFAR. All rights reserved.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

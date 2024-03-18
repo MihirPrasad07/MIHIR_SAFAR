@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - SAFAR</title>
+    
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-inline-size: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-block-end: 20px;
+            color: #007bff; /* Changed text color to blue */
+        }
+
+        p {
+            text-align: center;
+            margin-block-end: 30px;
+            color: #555; /* Changed text color to dark gray */
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+            margin-block-end: 10px;
+            color: #333; /* Changed label color to black */
+        }
+
+        input,
+        textarea {
+            padding: 12px;
+            margin-block-end: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            inline-size: 100%;
+            box-sizing: border-box;
+            transition: border-color 0.3s; /* Added transition effect */
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: #007bff; /* Changed border color on focus to blue */
+        }
+
+        button {
+            padding: 12px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            inline-size: 100%;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Media query for responsiveness */
+        @media screen and (max-inline-size: 768px) {
+            .container {
+                inline-size: 90%; /* Adjusted width for smaller screens */
+                margin: 30px auto; /* Adjusted margin for smaller screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Contact Us Form -->
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>Have questions or feedback? Reach out to us!</p>
+        <form id="contactForm" action="/submit_contact_form" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+
+        </form>
+    </div>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            // Prevent the default form submission
+            event.preventDefault();
+
+            // You can add additional form validation here if needed
+
+            // Simulate form submission success and redirect to the success page
+            window.location.href = 'success.html'; // Change 'success.html' to the URL of your success page
+        });
+    </script>
+</body>
+
+</html>

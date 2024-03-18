@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - SAFAR</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-X7G20FXEXVQn41cfZeGJz9z+jzEo9BsdwwWx0TJxXnq06J3Yd7BeRFzSQtPFA5rN" crossorigin="anonymous"></script>
+  <!-- Bootstrap CSS and JS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-X7G20FXEXVQn41cfZeGJz9z+jzEo9BsdwwWx0TJxXnq06J3Yd7BeRFzSQtPFA5rN" crossorigin="anonymous"></script>
+</head>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            chalo: {
+              'yellow': '#ffcc00',
+              'darkblue': '#263238',
+              'lightblue': '#26c6da',
+              'border': '#e0e0e0'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+</head>
+
+
+
+
+    <style>
+        /* Global styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f1f5f8;
+            color: #333;
+        }
+
+        .container {
+            max-inline-size: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            margin-block-start: 0;
+        }
+
+        p {
+            margin-block-end: 20px;
+        }
+
+        /* Header styles */
+        .header {
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 3em;
+            margin-block-end: 20px;
+        }
+
+        /* Main content styles */
+        .main-content {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-out;
+            padding-block-end: 100px; /* Add padding to accommodate the footer */
+
+        }
+
+        /* Footer styles */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0; /* Adjust the padding to make the footer smaller */
+    position: fixed;
+    inset-block-end: 0; /* Position the footer at the bottom of the viewport */
+    inline-size: 100%; /* Make the footer span the entire width of the viewport */
+    font-size: 12px; /* Adjust the font size to make it smaller */
+    animation: fadeInUp 1s ease-out;
+}
+
+        /* Animation */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Media query for responsiveness */
+        @media screen and (max-inline-size: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+        }
+
+        /* Additional styles */
+        .mission,
+        .vision,
+        .team,
+        .get-in-touch {
+            margin-block-end: 40px;
+            padding-block-end: 20px;
+            border-block-end: 1px solid #ccc;
+            text-align: center;
+        }
+
+        .mission h2,
+        .vision h2,
+        .team h2,
+        .get-in-touch h2 {
+            color: #007bff;
+            font-size: 24px;
+            margin-block-end: 10px;
+        }
+
+        .mission p,
+        .vision p,
+        .team p,
+        .get-in-touch p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Button styles */
+        .btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-transform: uppercase;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1>About Us</h1>
+            <p>Welcome to SAFAR - Your Travel Companion</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="container">
+            <div class="mission">
+                <h2>Our Mission</h2>
+                <p>At SAFAR, our mission is to provide seamless and convenient travel experiences for our customers. We strive to
+                    connect people with their destinations, making travel safe, comfortable, and enjoyable.</p>
+            </div>
+
+            <div class="vision">
+                <h2>Our Vision</h2>
+                <p>Our vision is to become the leading travel service provider globally, recognized for our commitment to innovation,
+                    reliability, and customer satisfaction.</p>
+            </div>
+
+            <div class="team">
+                <h2>Our Team</h2>
+                <p>We have a dedicated team of professionals who are passionate about travel and technology. Our team works tirelessly
+                    to develop and maintain the SAFAR platform, ensuring that our customers have access to the best travel solutions
+                    available.</p>
+            </div>
+
+            <div class="get-in-touch">
+                <h2>Get in Touch</h2>
+                <p>If you have any questions, feedback, or inquiries, please feel free to contact us. We'd love to hear from you!</p>
+                <p>Email: info@safar.com<br>
+
+                    Phone: 123-456-7890</p><br>
+
+                <a href="contact.html" class="btn">Contact Us</a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-chalo-yellow p-4 text-center">
+        <p>&copy; 2024 SAFAR. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

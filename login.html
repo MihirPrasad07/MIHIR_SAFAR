@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - SAFAR</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+
+<body class="bg-gradient-to-r from-blue-400 to-blue-700 min-h-screen flex items-center justify-center">
+  <div class="w-full max-w-xs m-auto bg-indigo-100 rounded-lg shadow-lg p-5">
+    <header>
+      <img src="SAFAR_logo.jpg" class="w-20 mx-auto mb-5" alt="SAFAR logo">
+    </header>
+
+    <form id="loginForm">
+      <div>
+        <label for="email" class="block mb-2 text-indigo-500">Email:</label>
+        <input type="email" class="block w-full p-3 rounded bg-gray-200 border border-transparent focus:outline-none" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="mt-4">
+        <label for="password" class="block mb-2 text-indigo-500">Password:</label>
+        <input type="password" class="block w-full p-3 rounded bg-gray-200 border border-transparent focus:outline-none" id="password" name="password" placeholder="Enter your password" required>
+      </div>
+
+      <button type="submit" class="w-full py-3 mt-6 bg-indigo-700 rounded text-white hover:bg-indigo-500 transition ease-in duration-300">Login</button>
+      
+      <div class="flex justify-between inline-block mt-4 text-xs text-indigo-500 cursor-pointer hover:text-black">Forgot password?</div>
+    </form>
+
+    <footer>
+      <div class="mt-6 text-grey-dark text-sm flex justify-center">
+        Don't have an account? 
+        <a href="signup.html" class="text-indigo-500 hover:text-indigo-600 ml-1">Sign Up</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Add event listener to the form for submission
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      // Prevent the default form submission behavior
+      event.preventDefault();
+      
+      // Get the entered email and password
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+      
+      // Dummy email and password for demonstration
+      var dummyEmail = 'mihir@gmail.com';
+      var dummyPassword = 'mihirprasad';
+      
+      // Check if the entered email and password match the dummy credentials
+      if (email === dummyEmail && password === dummyPassword) {
+        // Redirect to index.html
+        window.location.href = 'index.html';
+      } else {
+        // Show an alert for invalid credentials (you can customize this part)
+        alert('Invalid email or password. Please try again.');
+      }
+    });
+  </script>
+</body>
+</html>

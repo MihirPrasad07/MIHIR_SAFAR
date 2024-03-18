@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Trip - SAFAR</title>
+  <style>
+    /* Global styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      block-size: 100vh;
+    }
+
+    /* Form container */
+    .form-container {
+      max-inline-size: 400px;
+      padding: 30px;
+      background: linear-gradient(135deg, #00b4db, #0083b0);
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    /* Form header */
+    .form-header {
+      text-align: center;
+      margin-block-end: 30px;
+    }
+
+    .form-header h2 {
+      color: #fff;
+      font-size: 24px;
+      margin: 0;
+    }
+
+    /* Form inputs */
+    .form-input {
+      inline-size: 100%;
+      padding: 10px;
+      margin-block-end: 20px;
+      border: none;
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.8);
+      transition: background-color 0.3s ease;
+    }
+
+    .form-input:focus {
+      background-color: rgba(255, 255, 255, 1);
+      outline: none;
+    }
+
+    /* Submit button */
+    .form-btn {
+      inline-size: 100%;
+      padding: 15px;
+      border: none;
+      border-radius: 10px;
+      background-color: #ffcc00;
+      color: #263238;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .form-btn:hover {
+      background-color: #fcb900;
+      transform: scale(1.05);
+    }
+
+    .form-btn:focus {
+      outline: none;
+    }
+
+    /* Additional styles for a futuristic look */
+    .form-container:before {
+      content: "";
+      position: absolute;
+      inset-block-start: 0;
+      inset-inline-start: 0;
+      inline-size: 300%;
+      block-size: 100%;
+      background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+      animation: animateGradient 10s linear infinite;
+    }
+
+    @keyframes animateGradient {
+      0% { transform: translateX(-50%); }
+      100% { transform: translateX(150%); }
+    }
+
+    .form-input::placeholder {
+      color: rgba(0, 0, 0, 0.6);
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <div class="form-header">
+      <h2>Select Trip</h2>
+    </div>
+    <form class="form">
+      <input type="text" class="form-input" placeholder="Enter Route Number" required>
+      <input type="text" class="form-input" placeholder="Enter Start Stop" required>
+      <input type="text" class="form-input" placeholder="Enter End Stop" required>
+      <button type="button" onclick="location.href='trip_details.html'" class="form-btn">Let's Proceed</button>
+    </form>
+  </div>
+</body>
+</html>

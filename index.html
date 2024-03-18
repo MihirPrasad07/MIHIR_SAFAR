@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAFAR - Your Travel Companion</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-X7G20FXEXVQn41cfZeGJz9z+jzEo9BsdwwWx0TJxXnq06J3Yd7BeRFzSQtPFA5rN" crossorigin="anonymous"></script>
+  <!-- Bootstrap CSS and JS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-X7G20FXEXVQn41cfZeGJz9z+jzEo9BsdwwWx0TJxXnq06J3Yd7BeRFzSQtPFA5rN" crossorigin="anonymous"></script>
+</head>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            chalo: {
+              'yellow': '#ffcc00',
+              'darkblue': '#263238',
+              'lightblue': '#26c6da',
+              'border': '#e0e0e0'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+</head>
+
+<body style="background: linear-gradient(90deg, #00B4DB 0%, #0083B0 100%);" class="font-sans">
+
+    <!-- Header -->
+<div class="bg-safar-yellow">
+  <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8 flex justify-between items-center ">
+    <!-- Logo on the left -->
+    <a href="welcome1.html">
+    <img src="SAFAR_logo.jpg" class="w-20 mb-5" alt="SAFAR logo">
+  </a>
+    <div class="flex items-center">
+      <!-- Profile icon -->
+      <div class="block lg">
+        <button id="profileButton" class="p-2 text-safar-dark hover:text-safar-yellow hover:bg-safar-dark rounded transition duration-300" onclick="redirectToProfilePage()">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5.121 11.121a1.5 1.5 0 011.415 0l.879.88a2.5 2.5 0 003.768 0l.88-.88a1.5 1.5 0 011.414 0m0 0a1.5 1.5 0 010 2.121L12 17m0 0a1.5 1.5 0 01-2.121 0l-2.12-2.121a1.5 1.5 0 010-2.12zM12 11V5m0 6a2 2 0 100-4 2 2 0 000 4z" />
+          </svg>
+        </button>
+      </div>
+      <!-- Menu button -->
+      <button id="menuButton" class="ml-4 inline-flex items-center justify-center p-2 rounded-md text-safar-dark hover:text-white hover:bg-safar-dark focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+        <span class="sr-only">Open main menu</span>
+        <!-- Menu open: "hidden", Menu closed: "block" -->
+        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+        <!-- Menu open: "block", Menu closed: "hidden" -->
+        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <!-- Dropdown menu -->
+      <div id="menuDropdown" class="hidden absolute z-10 top-0 right-0 mt-12 w-48 bg-white rounded-md shadow-lg">
+        <a href="index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Home</a>
+        <a href="About.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">About</a>
+        <a href="payment.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Payment Page</a>
+        <a href="map.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Maps</a>
+        <a href="contact.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Contact us</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function redirectToProfilePage() {
+    // Redirect to the Profile page
+    window.location.href = "profile.html";
+  }
+</script>
+
+
+  <nav class="bg-chalo-yellow p-4 flex justify-between items-center">
+    <div class="flex-grow mr-4">
+      <input type="search" placeholder="Enter destination or bus number" class="w-full p-2">
+    </div>
+    <a href="select_trip.html" class="bg-white text-chalo-darkblue py-2 px-6 rounded-full font-medium shadow hover:bg-gray-100 transition duration-300">Reserve seat</a>
+    
+  </nav>
+
+  <main class="p-4">
+    <!-- Bus Ticket Section -->
+    <section>
+      <h2 class="text-xl font-semibold mb-3">SAFAR</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="bg-white p-4 rounded shadow-md flex items-center">
+          <div class="flex-grow">
+            <h3 class="font-semibold">Plan your Journey</h3>
+            <!-- The 'Plan Now' button redirects to 'select_trip.html' -->
+          <a href="plan.html" class="mt-2 bg-chalo-yellow text-white py-1 px-3 rounded-full text-sm">Plan Now</a>
+          </div>
+          <img src="Journey.jpg" alt="Plan your Journey" class="w-24 h-24 rounded-full object-cover">
+
+        </div>
+    <!-- Hidden Selection Section -->
+<section id="selectionSection" class="hidden">
+  <div class="container mt-4">
+    <!-- ... selection section code ... -->
+    <a href="available_buses.html" class="bg-chalo-yellow hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded">Next</a>
+  </div>
+
+</section>
+        <div class="bg-white p-4 rounded shadow-md flex items-center">
+          <div class="flex-grow">
+            <h3 class="font-semibold">Buy bus ticket</h3>
+          <!-- The 'Buy Now' button redirects to 'select_trip.html' -->
+          <a href="select_trip.html" class="mt-2 bg-chalo-yellow text-white py-1 px-3 rounded-full text-sm">Buy Now</a>
+        </div>
+        <img src="BuyTicket.png" alt="Buy bus ticket" class="w-24 h-24 rounded-full object-cover">
+
+      </div>
+    </section>
+
+<!-- Hidden Selection Section -->
+<section id="selectionSection" class="hidden">
+  <div class="container mt-4">
+    <!-- ... selection section code ... -->
+    <a href="available_buses.html" class="bg-chalo-yellow hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded">Next</a>
+  </div>
+</section>
+
+<!-- Hidden Trip Details Section -->
+<section id="tripDetailsSection" class="hidden">
+  <div class="container mt-4">
+    <!-- ... trip details section code ... -->
+    <a href="/payment.html" class="bg-chalo-yellow text-white py-2 px-4 rounded-full font-medium shadow hover:bg-gray-100 transition duration-300">Proceed to Payment</a>
+  </div>
+</section>
+</main>
+
+    <!-- Chalo Card Section -->
+    <section class="mt-4">
+      <div class="bg-white p-4 rounded shadow-md flex justify-between items-center">
+        <h3 class="font-semibold">Your SAFAR Wallet</h3>
+        <!-- <button class="bg-chalo-yellow text-white py-2 px-4 rounded-full text-sm">Let's Explore</button> -->
+        <a href="wallet.html" class="bg-chalo-yellow text-white py-2 px-4 rounded-full text-sm rounded-full font-medium shadow hover:bg-orange-100 transition duration-300">Let's Explore</a>
+      </div>
+    </section>
+
+    <!-- Nearest Bus Stop Section -->
+    <section class="mt-4">
+      <h2 class="text-2xl font-semibold mb-3">Nearest Bus Stop</h2>
+      <div class="bg-white p-6 rounded shadow-md">
+        <div class="flex justify-between items-center mb-6">
+          <div class="flex-grow">
+            <h3 class="font-semibold text-lg">Panvel Railway Station</h3>
+            <p class="text-sm font-medium">Next Buses</p>
+            <div class="mt-2">
+              <div class="flex items-center justify-between mb-2">
+                <p class="text-sm">87 - To Ghansoli Railway Station</p>
+                <span class="text-sm text-chalo-darkblue">10 min</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <p class="text-sm">99 - To Thane Bus Depot</p>
+                <span class="text-sm text-chalo-darkblue">20 min</span>
+              </div>
+            </div>
+          </div>
+          <i class="fas fa-bus-alt fa-4x text-chalo-darkblue"></i>
+        </div>
+        <a href="buses.html" class="block bg-chalo-darkblue text-white font-semibold px-4 py-2 rounded hover:bg-chalo-blue focus:outline-none focus:bg-chalo-blue transition duration-300">See all buses</a>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+<section class="mt-4">
+  <h2 class="text-xl font-semibold mb-3">Buses around you</h2>
+  <div class="map-container" style="position: relative; overflow: hidden; padding-block-start: 56.25%;">
+    <iframe src="https://www.google.com/maps/d/embed?mid=1dU7196Xk-istZzF7x-LKwaRg_zZlZzk&ehbc=2E312F" 
+            style="position: absolute; inset-block-start: 0; inset-inline-start: 0; inline-size: 100%; block-size: 100%; border: none;"
+            allowfullscreen
+            loading="lazy">
+    </iframe>
+  </div>
+</section>
+  </main>
+
+  <footer class="bg-chalo-yellow p-4 text-center">
+    <p>&copy; 2024 SAFAR. All rights reserved.</p>
+  </footer>
+
+  <!-- Your existing JavaScript code -->
+  <script>
+    // JavaScript to handle menu button functionality
+    const menuButton = document.getElementById('menuButton');
+    const menuDropdown = document.getElementById('menuDropdown');
+  
+    menuButton.addEventListener('click', () => {
+      // Toggle the menu dropdown
+      menuDropdown.classList.toggle('hidden');
+    });
+  
+    // Assuming you have a button with an id 'profileButton' for the profile icon
+    const profileButton = document.querySelector('.profile-button');
+    const profileDropdown = document.getElementById('profileDropdown'); // Add this element to your HTML
+  
+    profileButton.addEventListener('click', () => {
+      // Toggle the profile dropdown
+      profileDropdown.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+header, footer {
+    color: white;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.tickets h2 {
+    margin: 20px 0;
+}
+
+/* Add more styles for your ticket cards and other elements */

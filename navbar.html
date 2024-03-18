@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAFAR - Your Travel Companion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body { font-family: 'Roboto', sans-serif; }
+        .blue-gradient-bg {
+            background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+        }
+        /* Add custom CSS here if needed */
+    </style>
+</head>
+<body>
+
+    <!-- Responsive Sidebar -->
+    <div class="fixed inset-y-0 left-0 z-30 transition duration-300 transform bg-white w-64 overflow-y-auto lg:translate-x-0 lg:static lg:inset-0">
+        <div class="flex items-center justify-center mt-8">
+            <div class="flex items-center">
+                <span class="text-gray-800 text-2xl font-semibold">SAFAR</span>
+            </div>
+        </div>
+
+        <nav class="mt-10">
+            <!-- Sidebar content here -->
+        </nav>
+    </div>
+
+    <!-- Content Area -->
+    <div class="flex-1 flex flex-col overflow-hidden">
+        <header class="flex justify-between items-center p-4 blue-gradient-bg text-white">
+            <!-- Header content here -->
+        </header>
+
+        <main class="flex-1 overflow-x-hidden overflow-y-auto bg-gray-200">
+            <!-- Main content here -->
+        </main>
+    </div>
+
+    <script>
+        // Add JavaScript if needed for interactive components
+    </script>
+
+</body>
+</html>

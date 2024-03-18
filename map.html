@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps - SAFAR</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Additional CSS styles */
+        .map-container {
+            position: relative;
+            overflow: hidden;
+            padding-block-start: 56.25%;
+        }
+
+        .map-container iframe {
+            position: absolute;
+            inset-block-start: 0;
+            inset-inline-start: 0;
+            inline-size: 100%;
+            block-size: 100%;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="bg-safar-yellow">
+        <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-safar-dark">SAFAR</h1>
+            <div class="flex items-center">
+                <!-- Menu button -->
+                <button id="menuButton"
+                    class="ml-4 inline-flex items-center justify-center p-2 rounded-md text-safar-dark hover:text-white hover:bg-safar-dark focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                    onclick="toggleDropdown()">
+                    <span class="sr-only">Open main menu</span>
+                    <!-- Menu open: "hidden", Menu closed: "block" -->
+                    <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                    <!-- Menu open: "block", Menu closed: "hidden" -->
+                    <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div id="menuDropdown"
+                    class="hidden absolute z-10 top-0 right-0 mt-12 w-48 bg-white rounded-md shadow-lg">
+                    <a href="index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Home</a>
+                    <a href="About.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">About</a>
+                    <a href="payment.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Payment
+                        Page</a>
+                    <a href="map.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Maps</a>
+                    <a href="contact.html"
+                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Contact us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Map Section -->
+    <section class="mt-4">
+        <h2 class="text-xl font-semibold mb-3">Buses around you</h2>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1EHRaJFdzrIsl1V2pTmmyY8pAXFbGFRg"
+                allowfullscreen loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <script>
+        // Function to toggle the dropdown menu
+        function toggleDropdown() {
+            var menuDropdown = document.getElementById("menuDropdown");
+            menuDropdown.classList.toggle("hidden");
+        }
+    </script>
+
+</body>
+
+</html>

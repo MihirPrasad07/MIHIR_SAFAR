@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - SAFAR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    .form-input:focus {
+      box-shadow: 0 0 0 2px #34D399;
+    }
+    .social-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .social-icon {
+      width: 20px;
+      height: 20px;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-green-400 to-blue-600 flex flex-col justify-between">
+    <header class="text-center p-4 text-white">
+        <h1>SAFAR WebApp</h1>
+      </header>
+      <main class="px-4 sm:px-6 lg:px-8 mb-16">
+  <div class="w-full max-w-sm m-auto bg-white rounded-xl shadow-lg py-10 px-8">
+    <h1 class="text-2xl font-semibold text-center text-gray-700 mb-8">
+      Join SAFAR Today 🔐
+    </h1>
+
+    <form action="signup.php" method="post">
+      <div class="mb-4">
+        <label for="full_Name" class="block text-gray-600">Full Name</label>
+        <input type="text" id="fullName" class="w-full p-2 text-primary border rounded-md outline-none text-sm transition duration-150 ease-in-out mb-4" placeholder="John Doe" required />
+      </div>
+
+      <div class="mb-4">
+        <label for="username" class="block text-gray-600">Username</label>
+        <input type="text" id="username" class="w-full p-2 text-primary border rounded-md outline-none text-sm transition duration-150 ease-in-out mb-4" placeholder="Your Username" required />
+      </div>
+
+      <div class="mb-4">
+        <label for="email" class="block text-gray-600">Email</label>
+        <input type="email" id="email" class="w-full p-2 text-primary border rounded-md outline-none text-sm transition duration-150 ease-in-out mb-4" placeholder="you@example.com" required />
+      </div>
+
+      <div class="mb-4">
+        <label for="password" class="block text-gray-600">Password</label>
+        <input type="password" id="password" class="w-full p-2 text-primary border rounded-md outline-none text-sm transition duration-150 ease-in-out mb-4" placeholder="Create a password" required />
+      </div>
+
+      <div class="mb-6">
+        <label for="passwordConfirm" class="block text-gray-600">Confirm Password</label>
+        <input type="password" id="passwordConfirm" class="w-full p-2 text-primary border rounded-md outline-none text-sm transition duration-150 ease-in-out mb-4" placeholder="Confirm your password" required />
+      </div>
+
+      <div class="flex justify-center mt-6">
+        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+          Create Account
+        </button>
+      </div>
+    </form>
+
+    <div class="mt-6 text-center text-gray-600">Or sign up using</div>
+
+    <div class="flex justify-center mt-4">
+      <button class="social-button bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded transition duration-300">
+        Google
+      </button>
+      <button class="social-button bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded transition duration-300">
+        Facebook
+      </button>
+    </div>
+
+    <div class="text-center mt-8">
+      Already have an account?
+      <a href="login.html" class="text-blue-500 hover:text-blue-700 underline transition duration-300">Log in</a>
+    </div>
+  </div>
+</main>
+  <footer class="text-center p-4 text-white">
+    <p>&copy; 2024 SAFAR. All rights reserved.</p>
+  </footer>
+</body>
+</html>

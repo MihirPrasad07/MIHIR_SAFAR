@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAFAR - Your Travel Companion</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e3f2fd; /* Light blue background */
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #2196f3; /* Blue header */
+            text-align: center;
+            padding: 1rem 0;
+            color: #ffffff;
+        }
+        .search-container {
+            background: #bbdefb url('path_to_your_cityscape_background_image') no-repeat center center;
+            background-size: cover;
+            padding: 2rem;
+            text-align: center; /* Center align the content */
+        }
+        .search-box {
+            display: block;
+            inline-size: 80%; /* Adjust width */
+            max-inline-size: 300px; /* Set maximum width */
+            padding: 0.5rem;
+            margin: 1rem auto;
+            font-size: 1.25rem;
+            border: none; /* Remove border */
+            border-radius: 25px; /* Add border-radius */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box-shadow */
+        }
+        .city-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: start;
+            max-inline-size: 300px; /* Set maximum width */
+            margin: 0 auto; /* Center align the list */
+        }
+        .city-list li {
+            padding: 0.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+            background-color: #ffffff; /* White background */
+            border-radius: 5px; /* Add border-radius */
+            margin-block-end: 0.5rem; /* Add margin between items */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box-shadow */
+            transition: background-color 0.3s ease; /* Add transition */
+        }
+        .city-list li:hover {
+            background-color: #90caf9; /* Light blue background on hover */
+        }
+        /* Pagination arrows */
+        .pagination {
+            text-align: center;
+            margin-block-start: 2rem;
+        }
+        .pagination a {
+            font-size: 2rem; /* Adjust arrow size */
+            color: #2196f3; /* Blue color */
+            text-decoration: none;
+            margin: 0 1rem;
+            display: inline-block;
+            transition: color 0.3s ease; /* Add transition */
+        }
+        .pagination a:hover {
+            color: #90caf9; /* Light blue color on hover */
+        }
+        /* Position arrows */
+        .pagination .prev-arrow {
+            float: inline-start; /* Align to the left */
+        }
+        .pagination .next-arrow {
+            float: inline-end; /* Align to the right */
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>Find Bus Travel in Your City</h1>
+</div>
+
+<div class="search-container">
+    <input type="search" class="search-box" placeholder="Search city...">
+    <ul class="city-list">
+        <!-- Replace these with actual city data -->
+        <li><a href="welcome3.html">Mumbai</a></li>
+        <li>Agra</li>
+        <li>Ayodhya</li>
+        <li>Berhampur</li>
+        <li>Bhopal</li>
+        <li>Bhubaneswar</li>
+        <li>Chennai</li>
+        <li>Davanagere</li>
+        <!-- ... more cities ... -->
+    </ul>
+</div>
+
+<!-- Pagination arrows -->
+<div class="pagination">
+    <!-- Previous arrow -->
+    <a href="welcome1.html" class="prev-arrow">&#8592;</a>
+    <!-- Next arrow -->
+    <a href="welcome3.html" class="next-arrow">&#8594;</a>
+</div>
+
+</body>
+</html>
